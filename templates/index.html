@@ -28,7 +28,8 @@
 <script>
 pannellum.viewer('panorama', {
     "type": "equirectangular",
-    "panorama": "{{ url }}" {% if expand %},
+    "panorama": "{{ url }}",
+     "autoLoad": true{% if expand %},
     "title": "{{title}}",
     "author": "{{author}}"
            {% endif %}
