@@ -11,7 +11,6 @@ import base64
 import json
 app = Flask(__name__,static_url_path='')
 
-g = Github("cb1d748c0dad77f7a8db9231ce93aa5cde1e0767")
 org = g.get_organization("NaviGlobeTreks")
 user = g.get_user()
 
