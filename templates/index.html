@@ -28,9 +28,10 @@
 <script>
 pannellum.viewer('panorama', {
     "type": "equirectangular",
-    "panorama": "https://pannellum.org/images/alma-correlator-facility.jpg",
-    "title": "ALMA Correlator Facility",
-    "author": "Matthew Petroff"
+    "panorama": "{{ url }}" {% if expand %},
+    "title": "{{title}}",
+    "author": "{{author}}"
+           {% endif %}
 });
 </script>
 

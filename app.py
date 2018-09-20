@@ -7,9 +7,15 @@ app = Flask(__name__,static_url_path='')
 
 
 
-@app.route('/')
+@app.route('/', methods=["GET", "POST"])
 def send_home():
-	return render_template('index.html',tag ="test")
+	url = request.args.get("url")
+	title = request.args.get("title")
+	author = request.args.get("author")
+	expand = True
+	if(title is None):
+		expand = False
+	return render_template('index.html',url=url,title=title,author=author,expand=expand)
 
 
 if __name__ == '__main__':
